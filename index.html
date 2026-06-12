@@ -1,842 +1,473 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Anshuman Behera - Software Development Engineer @ Nagarro</title>
-    <meta content="Software Development Engineer at Nagarro specializing in Java Full-Stack Development, Generative AI, and Android Development. Building scalable enterprise applications with Spring Boot and exploring AI-powered solutions." name="description">
-    <meta content="Anshuman Behera,Software Development Engineer,Nagarro,Java Full-Stack Developer,Spring Boot,Generative AI,Android Development,Kotlin,Microservices,Apache Kafka" name="keywords">
+  <title>Anshuman Behera — Java Full-Stack Developer & GenAI Builder</title>
+  <meta name="description" content="Anshuman Behera — Associate Software Engineer at Nagarro. Java Full-Stack Developer building scalable microservices with Spring Boot, React frontends, GenAI-powered apps and Android experiences with Kotlin & Jetpack Compose.">
+  <meta name="keywords" content="Anshuman Behera, Java Full-Stack Developer, Nagarro, Spring Boot, Microservices, Generative AI, GenAI, Android, Kotlin, Apache Kafka, React, AWS, Azure">
+  <meta name="author" content="Anshuman Behera">
 
-    <!-- Favicons -->
-    <link href="assets/img/favicon-32x32.png" type="image/png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Anshuman Behera — Java Full-Stack Developer & GenAI Builder">
+  <meta property="og:description" content="Building scalable enterprise systems, GenAI-powered apps and modern Android experiences.">
+  <meta property="og:url" content="https://anshumanbehera27.github.io/My_portfolio/">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-          rel="stylesheet">
+  <!-- Favicons -->
+  <link href="assets/img/favicon-32x32.png" type="image/png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/venobox/venobox.min.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.min.css" rel="stylesheet">
-    
-    <!-- Custom CSS for Enhanced UI -->
-    <style>
-        /* Enhanced Hero Section - Keep Original Background */
-        #hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        #hero .typed {
-            font-size: 1.5rem;
-            font-weight: 500;
-        }
-        
-        /* Enhanced Skills Section - Light and Clean */
-        .skills-content .col-4 {
-            transition: transform 0.3s ease;
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 15px;
-            margin-bottom: 1rem;
-            border: 1px solid rgba(102, 126, 234, 0.1);
-        }
-        
-        .skills-content .col-4:hover {
-            transform: translateY(-3px);
-            background: rgba(255, 255, 255, 0.95);
-            border-color: rgba(102, 126, 234, 0.2);
-        }
-        
-        .skills-content img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-            margin-bottom: 0.5rem;
-            filter: grayscale(20%);
-            transition: filter 0.3s ease, transform 0.3s ease;
-        }
-        
-        .skills-content .col-4:hover img {
-            filter: grayscale(0%);
-            transform: scale(1.1);
-        }
-        
-        .skills-content .skill {
-            font-weight: 600;
-            color: #333;
-            margin-top: 0.5rem;
-        }
-        
-        /* Enhanced Project Cards */
-        .portfolio-item {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .portfolio-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-        }
-        
-        /* Enhanced Resume Section */
-        .resume-item {
-            border-left: 3px solid #667eea;
-            padding-left: 1.5rem;
-            margin-bottom: 2rem;
-            transition: border-color 0.3s ease;
-        }
-        
-        .resume-item:hover {
-            border-left-color: #764ba2;
-        }
-        
-        /* Enhanced About Section */
-        .about .img-thumbnail {
-            border: 3px solid #667eea;
-            transition: border-color 0.3s ease;
-        }
-        
-        .about .img-thumbnail:hover {
-            border-color: #764ba2;
-        }
-        
-        /* Enhanced Social Links */
-        .social-links a {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        /* Enhanced Section Titles */
-        .section-title h2 {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 2px;
-        }
-        
-        /* Enhanced Certifications */
-        .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: none;
-            border-radius: 15px;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            #hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            #hero .typed {
-                font-size: 1.2rem;
-            }
-            
-            .skills-content .col-4 {
-                margin-bottom: 1rem;
-                padding: 1rem;
-            }
-        }
-    </style>
+  <!-- Icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- ======= Mobile nav toggle button ======= -->
-<button type="button" class="mobile-nav-toggle d-xl-none">
-    <i class="icofont-navigation-menu"></i>
-</button>
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+  <div id="progress-bar"></div>
 
-<!-- ======= Header ======= -->
-<header id="header" class="d-flex flex-column justify-content-center">
+  <!-- ======================= NAV ======================= -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="#hero">&lt;<span>anshuman</span> /&gt;</a>
 
-    <nav class="nav-menu">
-        <ul>
-            <li class="active">
-                <a href="#hero">
-                    <i class="bx bx-home"></i>
-                    <span>Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="#about">
-                    <i class="bx bx-user"></i>
-                    <span>About</span>
-                </a>
-            </li>
-            <li>
-                <a href="#skills">
-                    <i class="bx bx-server"></i>
-                    <span>Skills</span>
-                </a>
-            </li>
-            <li>
-                <a href="#resume">
-                    <i class="bx bx-file-blank"></i>
-                    <span>Resume</span>
-                </a>
-            </li>
-            <li>
-                <a href="#projects">
-                    <i class="bx bx-book-content"></i>
-                    <span>Projects</span>
-                </a>
-            </li>
-            <li>
-                <a href="#certifications">
-                    <i class='bx bx-badge-check'></i>
-                    <span>Certifications</span>
-                </a>
-            </li>
-        </ul>
-    </nav><!-- .nav-menu -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-</header><!-- End Header -->
+      <div class="nav-actions">
+        <button id="theme-toggle" aria-label="Toggle theme">☀️</button>
+        <button id="nav-burger" aria-label="Open menu"><i class="bx bx-menu"></i></button>
+      </div>
+    </div>
+  </nav>
 
-<!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex flex-column justify-content-center">
-    <div class="container" data-aos="zoom-in" data-aos-delay="40">
-        <h1>Anshuman Behera</h1>
-        <p>
-            <span class="typed" data-typed-items="Software Development Engineer @ Nagarro,Java Full-Stack Developer,GenAI Enthusiast & Innovator,Android Developer"></span>
+  <!-- ======================= HERO ======================= -->
+  <section id="hero">
+    <canvas id="particles"></canvas>
+    <div class="container hero-grid">
+      <div>
+        <span class="hero-eyebrow"><span class="dot"></span> Open to exciting opportunities</span>
+        <h1 class="hero-title">Hi, I'm <span class="grad">Anshuman Behera</span></h1>
+        <div class="hero-typed">&gt; <span id="typed"></span><span class="cursor">▌</span></div>
+        <p class="hero-sub">
+          Associate Software Engineer at <strong>Nagarro</strong>, working in the Supply Chain &amp; Management
+          domain. I build end-to-end products — robust Spring Boot APIs, responsive React frontends,
+          cloud deployments on AWS &amp; Azure — and I love wiring <strong>Generative AI</strong> into everything I ship.
         </p>
-        <div class="social-links">
-            <a href="https://github.com/anshumanbehera27" target="_blank" class="github">
-                <i class="bx bxl-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/anshuman-behera27/" target="_blank" class="linkedin">
-                <i class="bx bxl-linkedin"></i>
-            </a>
-            <a href="https://x.com/anshumanbehera_" target="_blank" class="twitter">
-                <i class="bx bxl-twitter"></i>
-            </a>
-           
-            <a href="https://leetcode.com/anshuman_behera/" target="_blank" class="leetcode">
-                <i class="bx bxl-stack-overflow"></i>
-            </a> 
-           
-            <a href="mailto:beheraanshuman9@gmail.com" target="_blank" class="gmail">
-                <i class='bx bx-mail-send' ></i>
-            </a>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#projects"><i class="bx bx-rocket"></i> View Projects</a>
+          <a class="btn btn-ghost" href="#contact"><i class="bx bx-envelope"></i> Get in Touch</a>
         </div>
-        <div class="mt-4">
-            <a href="https://drive.google.com/file/d/1oGRneIxk2Rf1XGIVPKlBe-dndlbE4I1L/view?usp=sharing" target="_blank"
-               class="btn btn-outline-primary mb-2 rounded-pill">
-                <i class="bx bxs-download"></i>
-                Download Resume
-            </a>
+        <div class="hero-socials">
+          <a href="https://github.com/anshumanbehera27" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+          <a href="https://www.linkedin.com/in/anshuman-behera27/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://leetcode.com/anshuman_behera/" target="_blank" rel="noopener" aria-label="LeetCode"><i class="bx bx-code-curly"></i></a>
+          <a href="https://medium.com/@beheraanshuman9" target="_blank" rel="noopener" aria-label="Medium"><i class="bx bxl-medium"></i></a>
+          <a href="https://x.com/anshumanbehera_" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="bx bxl-twitter"></i></a>
         </div>
+      </div>
+
+      <div class="code-card">
+        <div class="code-card-bar"><i></i><i></i><i></i><span>AnshumanBehera.java</span></div>
+        <pre><span class="tok-kw">public class</span> <span class="tok-cl">AnshumanBehera</span> {
+
+  <span class="tok-kw">private</span> String role = <span class="tok-st">"ASE @ Nagarro"</span>;
+  <span class="tok-kw">private</span> String domain = <span class="tok-st">"Supply Chain &amp; Mgmt"</span>;
+  <span class="tok-kw">private</span> String[] stack = {
+    <span class="tok-st">"Java"</span>, <span class="tok-st">"Spring Boot"</span>, <span class="tok-st">"React"</span>,
+    <span class="tok-st">"Kafka"</span>, <span class="tok-st">"AWS"</span>, <span class="tok-st">"GenAI"</span>
+  };
+
+  <span class="tok-kw">public</span> String <span class="tok-fn">passion</span>() {
+    <span class="tok-kw">return</span> <span class="tok-st">"Turning ideas into impact 🚀"</span>;
+  }
+
+  <span class="tok-kw">public void</span> <span class="tok-fn">currentFocus</span>() {
+    <span class="tok-cm">// Microservices · LLM Integration</span>
+    <span class="tok-cm">// Event-Driven Architecture</span>
+  }
+}</pre>
+      </div>
     </div>
-</section><!-- End Hero -->
+    <a class="scroll-hint" href="#about" aria-label="Scroll down"><i class="bx bx-chevrons-down"></i></a>
+  </section>
 
-
-
-
-<main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about" style="">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>About</h2>
-            </div>
-
-            <div class="row mt-md-5">
-                <div class="col-lg-4">
-                    <img src="assets\img\profile-img.JPG" class="img-fluid img-thumbnail shadow-lg" alt="">
-                    
-                </div>
-                <div class="col-lg-8 pt-4 pt-lg-0 content">
-                    <h3>Software Development Engineer @ Nagarro</h3>
-                    <div class="row mt-3">
-                        <div class="col-lg-6">
-                            <ul>
-                                <li>
-                                    <i class="icofont-arrow-right"></i>
-                                    <strong>Email:</strong>
-                                    <a href="mailto:beheraanshuman9@gmail.com" target="_blank"> beheraanshuman9@gmail.com</a>
-                                </li>
-
-                                <li>
-                                    <i class="icofont-arrow-right"></i>
-                                    <strong>Website:</strong>
-                                    <a href="https://github.com/anshumanbehera27" target="_blank">CoderAnshuman.tech</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <ul>
-                                <li>
-                                    <i class="icofont-arrow-right"></i>
-                                    <strong>City:</strong>
-                                    <a href="https://www.onefivenine.com/india/villages/Kalahandi/Golamunda/Dharamgarh" target="_blank">  Kalahandi , Odisha, India</a>
-                                    
-                                </li>
-                                <li>
-                                    <i class="icofont-arrow-right"></i>
-                                    <strong>Degree:</strong>
-                                    <a href="https://happenings.lpu.in/why-choose-b-tech-cse/" target="_blank">B.tech, CSE</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="mt-3">
-                        <p class="text-justify">
-                            I'm a passionate Software Development Engineer at <strong>Nagarro</strong>, specializing in Java Full-Stack Development with a focus on building scalable enterprise applications. 
-                            Currently pursuing B.Tech in Computer Science Engineering at Lovely Professional University (2025), I bring a unique blend of academic excellence and professional experience.
-                        </p>
-                        <p class="text-justify">
-                            My expertise spans across <strong>Java Spring Boot Microservices</strong>, <strong>Generative AI & LLM Integration</strong>, and modern Android development with Kotlin & Jetpack Compose. 
-                            I'm passionate about exploring the fascinating world of Generative AI and its applications in software development, while also working with Apache Kafka for real-time data streaming.
-                        </p>
-                        <p class="text-justify">
-                            With excellent problem-solving skills and a collaborative mindset, I'm always eager to leverage my technical expertise to drive innovative projects and deliver impactful results. 
-                            I believe in continuous learning and staying at the forefront of cutting-edge technologies.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Skills</h2>
-            </div>
-
-            <div>
-                <h4 class="font-weight-bold pb-3">💻 Programming Languages</h4>
-                <div class="row skills-content text-center">
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/java.svg" alt="Java"/>
-                        <p class="skill">Java</p>
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="assets\icons\kotlin-icon.svg" alt="kotlin"/>
-                        <p class="skill">Kotlin</p>
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/javascript.svg" alt="JavaScript"/>
-                        <p class="skill">JavaScript</p>
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/python.svg" alt="Python"/>
-                        <p class="skill">Python</p>
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/html-5.svg" alt="HTML"/>
-                        <p class="skill">HTML</p>
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/css3.svg" alt="CSS"/>
-                        <p class="skill">CSS</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h4 class="font-weight-bold pb-3 pt-4">🏗️ Backend Development</h4>
-                <div class="row skills-content text-center">
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/spring.svg" alt="Spring Boot"/>
-                        <p class="skill">Spring Boot</p>
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/spring.svg" alt="Spring Security"/>
-                        <p class="skill">Spring Security</p>
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/iu-2.png" alt="MySQL"/>
-                        <p class="skill">MySQL</p>
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/mongodb.svg" alt="MongoDB"/>
-                        <p class="skill">MongoDB</p>
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/docker-icon.svg" alt="Docker"/>
-                        <p class="skill">Docker</p>
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/git.svg" alt="Git"/>
-                        <p class="skill">Git</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h4 class="font-weight-bold pb-3 pt-4">🎨 Frontend Development</h4>
-                <div class="row skills-content text-center">
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/javascript.svg" alt="React"/>
-                        <p class="skill">React</p>
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/html-5.svg" alt="HTML5"/>
-                        <p class="skill">HTML5</p>
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/css3.svg" alt="CSS3"/>
-                        <p class="skill">CSS3</p>
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/css3.svg" alt="Bootstrap"/>
-                        <p class="skill">Bootstrap</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h4 class="font-weight-bold pb-3 pt-4">📱 Mobile Development</h4>
-                <div class="row skills-content text-center">
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/android.png" alt="Android"/>
-                        <p class="skill">Android</p>
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="assets\icons\kotlin-icon.svg" alt="Jetpack Compose"/>
-                        <p class="skill">Jetpack Compose</p>
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/firebase_logo (1).png" alt="Firebase"/>
-                        <p class="skill">Firebase</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h4 class="font-weight-bold pb-3 pt-4">🤖 AI & Machine Learning</h4>
-                <div class="row skills-content text-center">
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/python.svg" alt="Generative AI"/>
-                        <p class="skill">Generative AI</p>
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/python.svg" alt="TensorFlow"/>
-                        <p class="skill">TensorFlow</p>
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/python.svg" alt="OpenAI"/>
-                        <p class="skill">OpenAI API</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h4 class="font-weight-bold pb-3 pt-4">🛠️ Tools & Technologies</h4>
-                <div class="row skills-content text-center">
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/git.svg" alt="Git"/>
-                        <p class="skill">Git</p>
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/docker-icon.svg" alt="Docker"/>
-                        <p class="skill">Docker</p>
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/linux.png" alt="Linux"/>
-                        <p class="skill">Linux</p>
-                    </div>
-                    <div class="col-4 col-md-2">
-                        <img src="assets/icons/windows-10.svg" alt="Windows"/>
-                        <p class="skill">Windows</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- End Skills Section -->
-
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Resume</h2>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <h3 class="resume-title">Work Experience</h3>
-                    <div class="resume-item">
-                        <h4>Software Development Engineer</h4>
-                        <h5>Current Position</h5>
-                        <p class="font-italic">Nagarro</p>
-                        <ul>
-                            <li>Building scalable enterprise applications with Java & Spring Boot ecosystem</li>
-                            <li>Working with Apache Kafka for real-time data streaming and event-driven architecture</li>
-                            <li>Developing microservices and implementing modern software engineering practices</li>
-                            <li>Collaborating with cross-functional teams to deliver high-quality software solutions</li>
-                            <li>Exploring Generative AI integration and LLM applications in enterprise software</li>
-                        </ul>
-                    </div>
-                    <div class="resume-item">
-                        <h4>Teaching Assistant</h4>
-                        <h5>Feb 2022 - June 2022</h5>
-                        <p class="font-italic">Coding Ninjas</p>
-                        <ul>
-                            <li>Mentored over 630+ peers within a 4-month period, facilitating their growth and development</li>
-                            <li>Interacting daily with a variety of people, I encouraged teamwork and problem-solving related to Python</li>
-                            <li>Solved over 1.2k problems, demonstrating strong problem-solving abilities</li>
-                            <li>Developed and improved problem-solving, communication, and debugging skills during the internship</li>
-                        </ul>
-                    </div>
-                    <div class="resume-item">
-                        <h4>Open Source Contributor</h4>
-                        <h5>May 2023 - August 2023</h5>
-                        <p class="font-italic">Girls Script Summer of Code</p>
-                        <ul>
-                            <li>Contributed to Crop Foresight Backend, an acclaimed open-source project, fostering interest in open-source development</li>
-                            <li>Developed expertise in Python, showcasing proficiency in coding and problem-solving</li>
-                            <li>Demonstrated effective teamwork and project management skills in enhancing Crop Foresight Backend functionality within the open-source community</li>
-                        </ul>
-                    </div>
-                    
-                </div>
-
-                
-
-
-              
-                <div class="col-lg-6">
-                    <h3 class="resume-title">Education</h3>
-                    <div class="resume-item">
-                        <h4>B.Tech, Computer Science & Engineering</h4>
-                        <h5>2021 - 2025</h5>&nbsp;
-                        <h5>CGPA: 7.5</h5>
-                        <p class="font-italic">Lovely Professional University, Phagwara (Punjab)</p>
-                        <p><strong>Focus Areas:</strong> Java Full-Stack Development, Generative AI, Android Development, Data Structures & Algorithms</p>
-                    </div>
-                    <div class="resume-item">
-                        <h4>Intermediate, CHSC</h4>
-                        <h5>2019 - 2021</h5>&nbsp;
-                        <h5>77%</h5>
-                        <p class="font-italic">Pragati Higher Secondary School ,Odisha</p>
-                    </div>
-
-                    
-                 
-                    
-                </div>
-            </div>
-        </div>
-    </section><!-- End Resume Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="projects" class="portfolio">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Projects</h2>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-                    <ul id="portfolio-filters">
-                        <li data-filter="*" class="filter-active">All</li>
-                        <li data-filter=".filter-android">Android</li>
-                        <li data-filter=".filter-web">Web</li>
-                        <li data-filter=".filter-datascience">Data Science</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-                <div class="col-lg-4 col-md-6 portfolio-item filter-android">
-                    <div class="portfolio-wrap">
-                        <img src="assets\img\projects\BharatAgroweb.png" class="img-fluid img-thumbnail" alt="">
-                        <div class="portfolio-info">
-                            <a href="https://github.com/anshumanbehera27/BharatAgroAndriodApp" target="_blank">Bharat Agro Andriod Application</a>
-                            <p>Android - Kotlin - ML </p>
-                            <div class="portfolio-links">
-                                <a href="assets\img\projects\BharatAgroweb.png" data-gall="portfolioGallery" class="venobox"
-                                   title="Bharat Agro Web - Python">
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <a href="https://github.com/anshumanbehera27/BharatAgroAndriodApp" target="_blank">
-                                    <i class="bx bxl-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-android">
-                    <div class="portfolio-wrap">
-                        <img src="assets\img\projects\uni_rommie.png" class="img-fluid img-thumbnail" alt="">
-                        <div class="portfolio-info">
-                            <a href="https://github.com/anshumanbehera27/UniRoomie" target="_blank">UniRoomies</a>
-                            <p>Android - Kotlin</p>
-                            <div class="portfolio-links">
-                                <a href="assets\img\projects\uni_rommie.png" data-gall="portfolioGallery" class="venobox"
-                                   title="UniRoomies - Android">
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <a href="https://github.com/anshumanbehera27/UniRoomie" target="_blank">
-                                    <i class="bx bxl-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 portfolio-item filter-datascience">
-                    <div class="portfolio-wrap">
-                        <img src="assets\img\projects\amazonprime.png" class="img-fluid img-thumbnail" alt="">
-                        <div class="portfolio-info">
-                            <a href="https://github.com/anshumanbehera27/AmazonPrimeVideo_Dashboard_PowerBi" target="_blank">AmazonPrimeVideo_Dashboard_PowerBi</a>
-                            <p>Data Analytics - PowerBI</p>
-                            <div class="portfolio-links">
-                                <a href="assets\img\projects\amazonprime.png" data-gall="portfolioGallery" class="venobox"
-                                   title="Amazon Prime Video Dashboard - PowerBI">
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <a href="https://github.com/anshumanbehera27/AmazonPrimeVideo_Dashboard_PowerBi" target="_blank">
-                                    <i class="bx bxl-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-android">
-                    <div class="portfolio-wrap">
-                        <img src="assets\img\projects\socialScout.png" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <a href="https://github.com/anshumanbehera27/SocialScout_project_Andriod" target="_blank">Social Scout</a>
-                            <p>Android - Kotlin</p>
-                            <div class="portfolio-links">
-                                <a href="assets\img\projects\socialScout.png" data-gall="portfolioGallery"
-                                   class="venobox" title="Social Scout - Android">
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <a href="https://github.com/anshumanbehera27/SocialScout_project_Andriod" target="_blank">
-                                    <i class="bx bxl-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item filter-android">
-                    <div class="portfolio-wrap">
-                        <img src="assets\img\projects\ZenFit.png" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <a href="https://github.com/anshumanbehera27/mediationAPPUI" target="_blank">Zen Fit</a>
-                            <p>Android - Jetpack Compose</p>
-                            <div class="portfolio-links">
-                                <a href="assets\img\projects\ZenFit.png" data-gall="portfolioGallery"
-                                   class="venobox" title="Zen Fit - Android">
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <a href="https://github.com/anshumanbehera27/mediationAPPUI" target="_blank">
-                                    <i class="bx bxl-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                    <div class="portfolio-wrap">
-                        <img src="assets\img\projects\productReview.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <a href="https://github.com/anshumanbehera27/Product_Reviews_project" target="_blank">Car Buying & Selling Website</a>
-                            <p>Web - React</p>
-                            <div class="portfolio-links">
-                                <a href="assets\img\projects\productReview.jpg"
-                                   data-gall="portfolioGallery"
-                                   class="venobox" title="Car Buying & Selling Website - React">
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <a href="https://github.com/anshumanbehera27/Product_Reviews_project"
-                                   target="_blank">
-                                    <i class="bx bxl-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- End Portfolio Section -->
-
-   <!-- ======= Certifications Section ======= -->
-    <section id="certifications">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Certifications</h2>
-            </div>
-
-            <div class="row" data-aos="zoom-in" data-aos-delay="100">
-                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card bg-light">
-                        <img class="card-img-top" src="assets\img\certifications\CodingninjasDSA.png"
-                             alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">DSA in Python</h5>
-                            <h6 class="card-subtitle text-muted font-weight-bold">Coding Ninjas</h6>
-                            <p></p>
-                            <a href="https://certificate.codingninjas.com/view/e0fd25f8588789c2" target="_blank" class="card-link">See
-                                Credential
-                                <i class="icofont-external-link"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card bg-light">
-                        <img class="card-img-top" src="assets\img\certifications\meta1.png"
-                             alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Create the User Interface in Android Studio</h5>
-                            <h6 class="card-subtitle text-muted font-weight-bold">Meta</h6>
-                            <p></p>
-                            <a href="https://www.coursera.org/account/accomplishments/certificate/3CRCMVK9X8UF"
-                               target="_blank" class="card-link">See Credential
-                                <i class="icofont-external-link"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-               
-                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card bg-light">
-                        <img class="card-img-top" src="assets/img/certifications/Internship.png"
-                             alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Internship Certificate</h5>
-                            <h6 class="card-subtitle text-muted font-weight-bold">Coding Ninjas</h6>
-                            <p></p>
-                            <a href="#" target="_blank" class="card-link">See
-                                Credential
-                                <i class="icofont-external-link"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                   
-                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card bg-light">
-                        <img class="card-img-top" src="assets\img\certifications\meta2.png"
-                             alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Advanced Programming in Kotlin</h5>
-                            <h6 class="card-subtitle text-muted font-weight-bold">Meta</h6>
-                            <p></p>
-                            <a href="https://www.coursera.org/account/accomplishments/certificate/WDEBNSGQDGTZ" target="_blank" class="card-link">See
-                                Credential
-                                <i class="icofont-external-link"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                   
-                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card bg-light">
-                        <img class="card-img-top" src="assets\img\certifications\python.png"
-                             alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Python</h5>
-                            <h6 class="card-subtitle text-muted font-weight-bold">Coding Ninjas</h6>
-                            <p></p>
-                            <a href="https://certificate.codingninjas.com/view/dff4cff2c9757079" target="_blank" class="card-link">See
-                                Credential
-                                <i class="icofont-external-link"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card bg-light">
-                        <img class="card-img-top" src="assets\img\certifications\meta3.png"
-                             alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Working With Data</h5>
-                            <h6 class="card-subtitle text-muted font-weight-bold">Meta</h6>
-                            <p></p>
-                            <a href="#"
-                               target="_blank" class="card-link">See Credential
-                                <i class="icofont-external-link"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- End Certifications Section --> 
-</main><!-- End #main -->
-
-<!-- ======= Footer ======= -->
-<footer id="footer">
+  <!-- ======================= ABOUT ======================= -->
+  <section id="about">
     <div class="container">
-        <h3>Anshuman Behera</h3>
-        <!--        <p>lorem ipsum</p>-->
-        <div class="social-links">
-            <a href="https://github.com/anshumanbehera27" target="_blank" class="github">
-                <i class="bx bxl-github"></i>
-            </a>
-            <a href="https://x.com/anshumanbehera_" target="_blank" class="twitter">
-                <i class="bx bxl-twitter"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/anshuman-behera27/" target="_blank" class="linkedin">
-                <i class="bx bxl-linkedin"></i>
-            </a>
-            
-        </div>
-        <div class="copyright">
-            Copyright &copy; <strong><span>Anshuman Behera</span></strong>. All Rights Reserved
+      <div class="section-head reveal">
+        <span class="kicker">// who I am</span>
+        <h2>About Me</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="profile-wrap reveal">
+          <div class="profile-frame">
+            <img src="assets/img/profile-image.jpg" alt="Anshuman Behera">
           </div>
-        <div class="credits">
-            Designed by
-            <b>CoderAnshu</b>
-            .
+          <span class="profile-badge">👨‍💻 SDE @ Nagarro</span>
         </div>
+
+        <div class="about-card reveal">
+          <h3>Full-Stack engineer with an AI-first mindset 🤖</h3>
+          <p>
+            I'm a <strong>Java Full-Stack Developer</strong> at Nagarro working on enterprise
+            supply-chain systems — designing RESTful APIs with <strong>Spring Boot</strong>, crafting
+            responsive <strong>React</strong> frontends, and deploying to <strong>AWS</strong> and <strong>Azure</strong>.
+          </p>
+          <p>
+            I have hands-on experience with <strong>Microservices</strong> and <strong>Event-Driven
+            Architecture</strong> (Apache Kafka), building scalable, decoupled and resilient distributed systems.
+            I'm passionate about integrating AI into the SDLC — using tools like GitHub Copilot and
+            Claude Code to ship better software, faster.
+          </p>
+          <div class="fact-chips">
+            <span class="chip">📍 Odisha, India</span>
+            <span class="chip">🏢 Nagarro</span>
+            <span class="chip">🎓 B.Tech CSE · LPU '25</span>
+            <span class="chip">📦 Supply Chain domain</span>
+            <span class="chip">🧳 Travel lover</span>
+          </div>
+        </div>
+
+        <div class="about-points">
+          <div class="point reveal">
+            <div class="ico"><i class="bx bx-server"></i></div>
+            <div>
+              <h4>Backend &amp; Distributed Systems</h4>
+              <p>Spring Boot microservices, Kafka event streaming, REST API design and cloud-native deployments.</p>
+            </div>
+          </div>
+          <div class="point reveal">
+            <div class="ico"><i class="bx bx-brain"></i></div>
+            <div>
+              <h4>Generative AI</h4>
+              <p>LLM integration, AI-powered features and an AI-augmented development workflow.</p>
+            </div>
+          </div>
+          <div class="point reveal">
+            <div class="ico"><i class="bx bxl-android"></i></div>
+            <div>
+              <h4>Android Development</h4>
+              <p>Real-world apps with Kotlin &amp; Jetpack Compose — BharatAgro, UniRoomies and more.</p>
+            </div>
+          </div>
+          <div class="point reveal">
+            <div class="ico"><i class="bx bx-chalkboard"></i></div>
+            <div>
+              <h4>Mentorship</h4>
+              <p>Former Teaching Assistant at Coding Ninjas — mentored 630+ students in DSA and problem solving.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</footer><!-- End Footer -->
+  </section>
 
-<a href="#" class="back-to-top">
-    <i class="bx bx-up-arrow-alt"></i>
-</a>
-<div id="preloader"></div>
+  <!-- ======================= EXPERIENCE ======================= -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">// my journey</span>
+        <h2>Experience &amp; Education</h2>
+        <div class="underline"></div>
+      </div>
 
-<!-- Vendor JS Files -->
-<script src="assets/vendor/jquery/jquery.min.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/venobox/venobox.min.js"></script>
-<script src="assets/vendor/typed.js/typed.min.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-card">
+            <span class="tl-meta">2024 — Present</span>
+            <h3>Associate Software Engineer</h3>
+            <div class="org">Nagarro · Supply Chain &amp; Management domain</div>
+            <ul class="tl-more">
+              <li>Design and build RESTful APIs with Java &amp; Spring Boot for enterprise supply-chain platforms.</li>
+              <li>Develop responsive React frontends and ship features end-to-end.</li>
+              <li>Work with Microservices &amp; Event-Driven Architecture using Apache Kafka.</li>
+              <li>Deploy and operate services on AWS and Azure.</li>
+              <li>Champion AI-assisted development with GitHub Copilot and Claude Code.</li>
+            </ul>
+            <div class="tl-toggle-hint">click to expand ↓</div>
+          </div>
+        </div>
 
-<!-- Template Main JS File -->
-<script src="assets/js/main.min.js"></script>    
+        <div class="tl-item reveal">
+          <div class="tl-card">
+            <span class="tl-meta">Internship → TA</span>
+            <h3>Teaching Assistant — Data Structures &amp; Algorithms</h3>
+            <div class="org">Coding Ninjas</div>
+            <ul class="tl-more">
+              <li>Mentored 630+ students through DSA concepts and problem-solving sessions.</li>
+              <li>Debugged student code, conducted doubt-resolution sessions and strengthened communication skills.</li>
+            </ul>
+            <div class="tl-toggle-hint">click to expand ↓</div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-card">
+            <span class="tl-meta">2021 — 2025</span>
+            <h3>B.Tech — Computer Science &amp; Engineering</h3>
+            <div class="org">Lovely Professional University</div>
+            <ul class="tl-more">
+              <li>Focused on software engineering, distributed systems and machine learning fundamentals.</li>
+              <li>Solved 500+ DSA problems across LeetCode and competitive platforms.</li>
+            </ul>
+            <div class="tl-toggle-hint">click to expand ↓</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= SKILLS ======================= -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">// my toolbox</span>
+        <h2>Skills &amp; Technologies</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="skill-tabs reveal">
+        <button class="skill-tab active" data-panel="backend">⚙️ Backend</button>
+        <button class="skill-tab" data-panel="frontend">🎨 Frontend</button>
+        <button class="skill-tab" data-panel="mobile">📱 Mobile</button>
+        <button class="skill-tab" data-panel="ai">🤖 AI &amp; GenAI</button>
+        <button class="skill-tab" data-panel="cloud">☁️ Cloud &amp; Tools</button>
+      </div>
+
+      <div class="skill-panel active" id="panel-backend">
+        <div class="skill-card"><img src="assets/icons/java.svg" alt="" onerror="this.style.display='none'"><span>Java</span></div>
+        <div class="skill-card"><img src="assets/icons/spring.svg" alt="" onerror="this.style.display='none'"><span>Spring Boot</span></div>
+        <div class="skill-card"><img src="assets/icons/spring.svg" alt="" onerror="this.style.display='none'"><span>Spring Security</span></div>
+        <div class="skill-card"><img class="inv" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" alt="" onerror="this.style.display='none'"><span>Apache Kafka</span></div>
+        <div class="skill-card"><img src="assets/icons/mysql-logo.svg" alt="" onerror="this.style.display='none'"><span>MySQL</span></div>
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" onerror="this.style.display='none'"><span>PostgreSQL</span></div>
+        <div class="skill-card"><img src="assets/icons/mongodb.svg" alt="" onerror="this.style.display='none'"><span>MongoDB</span></div>
+        <div class="skill-card"><div class="emoji">🧩</div><span>Microservices</span></div>
+      </div>
+
+      <div class="skill-panel" id="panel-frontend">
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" onerror="this.style.display='none'"><span>React</span></div>
+        <div class="skill-card"><img src="assets/icons/javascript.svg" alt="" onerror="this.style.display='none'"><span>JavaScript</span></div>
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="" onerror="this.style.display='none'"><span>TypeScript</span></div>
+        <div class="skill-card"><img src="assets/icons/html-5.svg" alt="" onerror="this.style.display='none'"><span>HTML5</span></div>
+        <div class="skill-card"><img src="assets/icons/css3.svg" alt="" onerror="this.style.display='none'"><span>CSS3</span></div>
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="" onerror="this.style.display='none'"><span>Tailwind CSS</span></div>
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" alt="" onerror="this.style.display='none'"><span>Material UI</span></div>
+      </div>
+
+      <div class="skill-panel" id="panel-mobile">
+        <div class="skill-card"><img src="assets/icons/kotlin-icon.svg" alt="" onerror="this.style.display='none'"><span>Kotlin</span></div>
+        <div class="skill-card"><img src="assets/icons/android.svg" alt="" onerror="this.style.display='none'"><span>Android</span></div>
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetpackcompose/jetpackcompose-original.svg" alt="" onerror="this.style.display='none'"><span>Jetpack Compose</span></div>
+        <div class="skill-card"><img src="assets/icons/firebase_logo (1).png" alt="" onerror="this.style.display='none'"><span>Firebase</span></div>
+        <div class="skill-card"><div class="emoji">🏗️</div><span>MVVM</span></div>
+      </div>
+
+      <div class="skill-panel" id="panel-ai">
+        <div class="skill-card"><div class="emoji">✨</div><span>Generative AI</span></div>
+        <div class="skill-card"><div class="emoji">🧠</div><span>LLM Integration</span></div>
+        <div class="skill-card"><div class="emoji">🤖</div><span>OpenAI API</span></div>
+        <div class="skill-card"><div class="emoji">⚡</div><span>GitHub Copilot</span></div>
+        <div class="skill-card"><div class="emoji">🟣</div><span>Claude Code</span></div>
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="" onerror="this.style.display='none'"><span>TensorFlow</span></div>
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="" onerror="this.style.display='none'"><span>PyTorch</span></div>
+        <div class="skill-card"><img src="assets/icons/python.svg" alt="" onerror="this.style.display='none'"><span>Python</span></div>
+      </div>
+
+      <div class="skill-panel" id="panel-cloud">
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="" onerror="this.style.display='none'"><span>AWS</span></div>
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="" onerror="this.style.display='none'"><span>Azure</span></div>
+        <div class="skill-card"><img src="assets/icons/docker-icon.svg" alt="" onerror="this.style.display='none'"><span>Docker</span></div>
+        <div class="skill-card"><img src="assets/icons/git.svg" alt="" onerror="this.style.display='none'"><span>Git</span></div>
+        <div class="skill-card"><img class="inv" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" onerror="this.style.display='none'"><span>GitHub</span></div>
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="" onerror="this.style.display='none'"><span>Postman</span></div>
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" alt="" onerror="this.style.display='none'"><span>IntelliJ IDEA</span></div>
+        <div class="skill-card"><img src="assets/icons/linux.svg" alt="" onerror="this.style.display='none'"><span>Linux</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= PROJECTS ======================= -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">// things I've built</span>
+        <h2>Featured Projects</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="project-filters reveal">
+        <button class="skill-tab active" data-filter="all">All</button>
+        <button class="skill-tab" data-filter="genai">🤖 GenAI</button>
+        <button class="skill-tab" data-filter="fullstack">🌐 Full-Stack</button>
+        <button class="skill-tab" data-filter="android">📱 Android</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card featured reveal" data-cat="genai">
+          <span class="featured-tag">GenAI</span>
+          <div class="project-icon">🤖</div>
+          <h3>GenAI LLM Integration Suite</h3>
+          <p>
+            AI-powered applications that wire Large Language Models into real workflows —
+            prompt pipelines, retrieval-augmented generation and intelligent assistants that
+            bring <span class="highlight">Generative AI into the SDLC</span>.
+          </p>
+          <div class="tech-tags">
+            <span>Python</span><span>OpenAI API</span><span>LLMs</span><span>RAG</span><span>React</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/anshumanbehera27" target="_blank" rel="noopener"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card featured reveal" data-cat="genai android">
+          <span class="featured-tag">GenAI</span>
+          <div class="project-icon">🌾</div>
+          <h3>BharatAgro</h3>
+          <p>
+            AI-powered farming cost optimization platform for Indian farmers, with
+            <span class="highlight">92% prediction accuracy</span> on crop cost estimates.
+            Built as a real-world Android app with a clean MVVM architecture.
+          </p>
+          <div class="tech-tags">
+            <span>Kotlin</span><span>Jetpack Compose</span><span>Firebase</span><span>ML</span><span>MVVM</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/anshumanbehera27" target="_blank" rel="noopener"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-cat="fullstack">
+          <div class="project-icon">🏠</div>
+          <h3>Homigo</h3>
+          <p>
+            A roommate + accommodation matching platform for curated co-living. Seekers discover
+            compatible roommates; owners list properties, complete KYC and manage inquiries with
+            <span class="highlight">real-time chat via Socket.io</span>.
+          </p>
+          <div class="tech-tags">
+            <span>React</span><span>TypeScript</span><span>Express</span><span>Supabase</span><span>Socket.io</span><span>Clerk</span>
+          </div>
+          <div class="project-links">
+            <a href="https://homigo-chi.vercel.app/#/landing" target="_blank" rel="noopener"><i class="bx bx-link-external"></i> Live Demo</a>
+            <a href="https://github.com/anshumanbehera27" target="_blank" rel="noopener"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-cat="android fullstack">
+          <div class="project-icon">🛏️</div>
+          <h3>UniRoomies</h3>
+          <p>
+            A real-time roommate-finding platform for students — match with compatible roommates,
+            chat instantly and find your next home near campus.
+          </p>
+          <div class="tech-tags">
+            <span>Java</span><span>Android</span><span>Firebase</span><span>Material Design</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/anshumanbehera27" target="_blank" rel="noopener"><i class="bx bxl-github"></i> GitHub</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= STATS ======================= -->
+  <section id="stats">
+    <div class="container">
+      <div class="stats-band reveal">
+        <div class="stat">
+          <div class="num" data-target="500" data-suffix="+">0</div>
+          <div class="label">LeetCode problems solved</div>
+        </div>
+        <div class="stat">
+          <div class="num" data-target="630" data-suffix="+">0</div>
+          <div class="label">Students mentored</div>
+        </div>
+        <div class="stat">
+          <div class="num" data-target="10" data-suffix="+">0</div>
+          <div class="label">Projects built</div>
+        </div>
+        <div class="stat">
+          <div class="num" data-target="25" data-suffix="+">0</div>
+          <div class="label">Technologies worked with</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= CONTACT ======================= -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">// let's connect</span>
+        <h2>Get in Touch</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <div class="ico"><i class="bx bx-envelope"></i></div>
+          <h4>Email</h4>
+          <a href="mailto:beheraanshuman9@gmail.com">beheraanshuman9@gmail.com</a>
+        </div>
+        <div class="contact-card reveal">
+          <div class="ico"><i class="bx bxl-linkedin"></i></div>
+          <h4>LinkedIn</h4>
+          <a href="https://www.linkedin.com/in/anshuman-behera27/" target="_blank" rel="noopener">anshuman-behera27</a>
+        </div>
+        <div class="contact-card reveal">
+          <div class="ico"><i class="bx bx-map"></i></div>
+          <h4>Location</h4>
+          <p>Odisha, India 🇮🇳</p>
+        </div>
+      </div>
+
+      <div class="contact-socials reveal">
+        <a href="https://github.com/anshumanbehera27" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+        <a href="https://www.linkedin.com/in/anshuman-behera27/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://leetcode.com/anshuman_behera/" target="_blank" rel="noopener" aria-label="LeetCode"><i class="bx bx-code-curly"></i></a>
+        <a href="https://medium.com/@beheraanshuman9" target="_blank" rel="noopener" aria-label="Medium"><i class="bx bxl-medium"></i></a>
+        <a href="https://x.com/anshumanbehera_" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="mailto:beheraanshuman9@gmail.com" aria-label="Email"><i class="bx bx-envelope"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer>
+    <div class="container">
+      <p>Built with <span class="heart">❤</span> by Anshuman Behera · © <span id="year">2026</span></p>
+      <p class="mono">"Code is poetry written in logic"</p>
+    </div>
+  </footer>
+
+  <button id="to-top" aria-label="Back to top"><i class="bx bx-up-arrow-alt"></i></button>
+
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
